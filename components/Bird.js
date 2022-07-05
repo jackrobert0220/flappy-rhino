@@ -1,6 +1,7 @@
 import React from "react";
 import Matter from "matter-js";
 import { View } from "react-native";
+import rhino from "../assets/flying-rhino.png";
 
 const Bird = (props) => {
   const widthBody = props.body.bounds.max.x - props.body.bounds.min.x;

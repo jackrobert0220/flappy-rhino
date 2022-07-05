@@ -1,5 +1,6 @@
 import Matter from "matter-js";
 import Bird from "../components/Bird";
+import rhino from "../assets/flying-rhino.png";
 
 export default (restart) => {
   let engine = Matter.Engine.create({ enableSleeping: false });
