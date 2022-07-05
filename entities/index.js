@@ -6,7 +6,7 @@ export default (restart) => {
 
   let world = engine.world;
 
-  world.gravity.y = 0.4;
+  engine.gravity.y = 0.4;
 
   return {
     physics: { engine, world },
