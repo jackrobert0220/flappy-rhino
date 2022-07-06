@@ -9,9 +9,9 @@ import Physics from "./physics";
 export default function App() {
   const [running, setrunning] = useState(false)
   useEffect(() => {
-    setrunning(true)
+    setrunning(false)
   }, [])
-  
+
   return (
     <View style={{ flex: 1 }}>
       <GameEngine
