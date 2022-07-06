@@ -6,11 +6,11 @@ import entities from "./entities";
 import Physics from "./physics";
 
 export default function App() {
-  const [running, setrunning] = useState(false);
+  const [running, setRunning] = useState(false);
   const [gameEngine, setGameEngine] = useState(null);
   const [currentPoints, setCurrentPoints] = useState(0);
   useEffect(() => {
-    setrunning(false);
+    setRunning(false);
   }, []);
 
   return (
@@ -28,21 +28,19 @@ export default function App() {
         {currentPoints}
       </Text>
       <GameEngine
-        ref={(ref) => {
-          setGameEngine(ref);
-        }}
+        ref={(ref) => { setGameEngine(ref) }}
         systems={[Physics]}
         entities={entities()}
         running={running}
         onEvent={(e) => {
           switch (e.type) {
-            case "game_over":
-              setrunning(false);
-              gameEngine.stop();
+            case 'game_over':
+              setRunning(false)
+              gameEngine.stop()
               break;
-            case "new_point":
-              setCurrentPoints(currentPoints + 1);
-              break;
+            case 'new_point':
+              setCurrentPoints(currentPoints + 1)
+              
           }
         }}
         style={{
@@ -70,7 +68,7 @@ export default function App() {
             }}
             onPress={() => {
               setCurrentPoints(0);
-              setrunning(true);
+              setRunning(true);
               gameEngine.swap(entities());
             }}
           >
