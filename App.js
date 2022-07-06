@@ -9,7 +9,7 @@ import Physics from "./physics";
 export default function App() {
   const [running, setrunning] = useState(false)
   useEffect(() => {
-    setrunning(false)
+    setrunning(true)
   }, [])
 
   return (
