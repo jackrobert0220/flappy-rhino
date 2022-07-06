@@ -1,7 +1,7 @@
 import React from "react";
 import Matter from "matter-js";
 import { Image, View } from "react-native";
-import rhino from "../assets/flying-rhino.png";
+
 
 const Floor = (props) => {
   const widthBody = props.body.bounds.max.x - props.body.bounds.min.x;
@@ -23,7 +23,6 @@ const Floor = (props) => {
         height: heightBody,
       }}
     >
-    <Image source={rhino} style={{ width: 90, height: 80 }} /> 
 
     </View>
   );

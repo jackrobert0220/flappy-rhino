@@ -76,27 +76,35 @@ export default function App() {
           >
             <Text style={{ fontWeight: "bold", fontSize: 30 }}>START GAME</Text>
           </TouchableOpacity>
-          <View
-            style={{
-              paddingVertical: 10,
-              paddingHorizontal: 30,
+          <TouchableOpacity style={{
+              backgroundColor: "black",
+              color: "white",
+              paddingVertical: 20,
+              paddingHorizontal: 40,
               borderRadius: 8,
-              marginTop: 70,
-            }}
-          >
-            <Text
-              style={{
-                color: "white",
-                fontWeight: "bold",
-                fontSize: 30,
-                textShadowColor: "rgba(0, 0, 0, 0.75)",
-                textShadowOffset: { width: -1, height: 1 },
-                textShadowRadius: 10,
-              }}
+              borderWidth: 5,
+              marginTop: 20,
+            }}>
+            <View
+            
             >
-              @PlasticRhinoBand Artwork by: @MCMorrisDesign
-            </Text>
-          </View>
+              <Text
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  color: "white",
+                  fontWeight: "bold",
+                  fontSize: 30,
+                  textShadowColor: "rgba(0, 0, 0, 0.75)",
+                  textShadowOffset: { width: -1, height: 1 },
+                  textShadowRadius: 10,
+                }}
+              >
+                @PlasticRhinoBand Artwork by: @MCMorrisDesign
+              </Text>
+            </View>
+          </TouchableOpacity>
         </View>
       ) : null}
     </View>
