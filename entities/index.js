@@ -18,7 +18,7 @@ export default (restart) => {
   return {
     physics: { engine, world },
     // ----- change to IMAGE later ------
-    Bird: Bird(world, "green", { x: 50, y: 300 }, { height: 90, width: 80 }),
+    Bird: Bird(world, "green", { x: 50, y: 300 }, { height: 90, width: 90 }),
     Floor: Floor(world, "red", { x: windowWidth / 2, y: windowHeight }, { height: 50, width: windowWidth}),
   };
 };
