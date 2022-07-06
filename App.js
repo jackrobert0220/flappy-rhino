@@ -13,7 +13,7 @@ export default function App() {
   }, [])
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ backgroundColor: "#212121", flex: 1}}>
       <GameEngine
         systems={[Physics]}
         entities={entities()}
