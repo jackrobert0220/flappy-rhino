@@ -15,7 +15,7 @@ const Obstacle = (props) => {
   return (
     <View
       style={{
-        borderWidth: 0,
+        borderWidth: 1,
         borderColor: color,
         borderStyle: "none",
         position: "absolute",
@@ -37,7 +37,10 @@ export default (world, label, color, pos, size) => {
     pos.y,
     size.width,
     size.height,
-    { label }
+    {
+        label,
+        isStatic: true
+    }
   );
   Matter.World.add(world, initialObstacle);
 
