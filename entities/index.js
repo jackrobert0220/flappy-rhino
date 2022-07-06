@@ -16,7 +16,7 @@ export default (restart) => {
 
   engine.gravity.y = 0.4;
 
-  const pipeSizePosA = getPipeSizePosPair(-210);
+  const pipeSizePosA = getPipeSizePosPair();
   return {
     physics: { engine, world },
 
@@ -28,6 +28,14 @@ export default (restart) => {
       "red",
       pipeSizePosA.pipeTop.pos,
       pipeSizePosA.pipeTop.size
+    ),
+    
+    ObstacleBottom1: Obstacle(
+      world,
+      "ObstacleBottom1",
+      "red",
+      pipeSizePosA.pipeBottom.pos,
+      pipeSizePosA.pipeBottom.size
     ),
 
     Floor: Floor(

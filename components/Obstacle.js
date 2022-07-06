@@ -1,7 +1,8 @@
 import React from "react";
 import Matter from "matter-js";
 import { Image, View } from "react-native";
-import knife from "../assets/WhiteKnife-01.png";
+import knife from "../assets/WhiteKnife.png";
+import reactDom from "react-dom";
 
 const Obstacle = (props) => {
   const widthBody = props.body.bounds.max.x - props.body.bounds.min.x;
@@ -25,7 +26,11 @@ const Obstacle = (props) => {
         height: heightBody,
       }}
     >
-    <Image source={knife} style={{ width: 100, height: 90 }} /> 
+    <Image source={knife} style={{ width: 65, height: 420 }} /> 
+    {/* <Image source={knife} style={{ width: 75, height: 110, transform: [{ rotate: '55deg'}] }} /> 
+    <Image source={knife} style={{ width: 75, height: 110, transform: [{ rotate: '55deg'}] }} /> 
+    <Image source={knife} style={{ width: 75, height: 110, transform: [{ rotate: '55deg'}] }} /> 
+    <Image source={knife} style={{ width: 75, height: 110, transform: [{ rotate: '55deg'}] }} />  */}
 
     </View>
   );
