@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import entities from "./entities";
 import Physics from "./physics";
@@ -15,6 +15,7 @@ export default function App() {
 
   return (
     <View style={{ backgroundColor: "#212121", flex: 1 }}>
+    <Text style={{ textAlign: 'center', fontSize: 50, fontWeight: 'bold', margin: 40, color: 'white'}}>{currentPoints}</Text>
       <GameEngine
         ref={(ref) => {
           setGameEngine(ref);
