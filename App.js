@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import entities from "./entities";
 import Physics from "./physics";
@@ -10,7 +10,7 @@ export default function App() {
   const [gameEngine, setGameEngine] = useState(null);
   const [currentPoints, setCurrentPoints] = useState(0)
   useEffect(() => {
-    setrunning(true);
+    setrunning(false);
   }, []);
 
   return (
@@ -28,7 +28,6 @@ export default function App() {
             case "game_over":
               setrunning(false);
               gameEngine.stop()
-              setCurrentPoints(0)
               break;
             case 'new_point': 
               setCurrentPoints(currentPoints + 1)
@@ -48,6 +47,21 @@ export default function App() {
 
       </GameEngine>
 
+        {!running ? 
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+          <TouchableOpacity style={{backgroundColor: 'white', paddingVertical: 20, paddingHorizontal: 40, borderRadius: 8, borderWidth: 5}}
+          onPress={() => {
+            setCurrentPoints(0)
+            setrunning(true)
+            gameEngine.swap(entities())
+          }}>
+            <Text style={{fontWeight: 'bold', fontSize: 30}}>
+              START GAME
+            </Text>
+
+          </TouchableOpacity>
+
+        </View> : null}
     </View>
   );
 }
