@@ -25,7 +25,7 @@ const Bird = (props) => {
         height: heightBody,
       }}
     >
-    <Image source={rhino} style={{ width: 80, height: 80 }} /> 
+    <Image source={rhino} style={{ width: 50, height: 50 }} /> 
 
     </View>
   );
