@@ -8,6 +8,7 @@ import Physics from "./physics";
 export default function App() {
   const [running, setrunning] = useState(false);
   const [gameEngine, setGameEngine] = useState(null);
+  const [currentPoints, setCurrentPoints] = useState(0)
   useEffect(() => {
     setrunning(true);
   }, []);
@@ -25,6 +26,8 @@ export default function App() {
           switch (e.type) {
             case "game_over":
               setrunning(false);
+              gameEngine.stop()
+              setCurrentPoints(0)
           }
         }}
         style={{
@@ -34,9 +37,12 @@ export default function App() {
           right: 0,
           bottom: 0,
         }}
-      ></GameEngine>
+      >
 
       <StatusBar style="auto" hidden={true} />
+
+      </GameEngine>
+
     </View>
   );
 }
