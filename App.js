@@ -28,6 +28,10 @@ export default function App() {
               setrunning(false);
               gameEngine.stop()
               setCurrentPoints(0)
+              break;
+            case 'new_point': 
+              setCurrentPoints(currentPoints + 1)
+              break;
           }
         }}
         style={{
