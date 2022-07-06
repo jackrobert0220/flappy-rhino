@@ -1,6 +1,6 @@
 import React from "react";
 import Matter from "matter-js";
-import { View } from "react-native";
+import { Image, View } from "react-native";
 import rhino from "../assets/flying-rhino.png";
 
 const Bird = (props) => {
@@ -15,16 +15,19 @@ const Bird = (props) => {
   return (
     <View
       style={{
-        borderWidth: 1,
+        borderWidth: 0,
         borderColor: color,
-        borderStyle: "solid",
+        borderStyle: "none",
         position: "absolute",
         left: xBody,
         top: yBody,
         width: widthBody,
         height: heightBody,
       }}
-    />
+    >
+    <Image source={rhino} style={{ width: 110, height: 100 }} /> 
+
+    </View>
   );
 };
 
